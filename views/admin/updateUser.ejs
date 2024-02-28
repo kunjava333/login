@@ -1,0 +1,16 @@
+<%- include('../layout/header') %>
+
+<form action="/admin/edited">
+
+    <input type="text" name="name" placeholder="name" value="<%= users.name  %>">
+<br><br>
+    <input type="email" name="email" placeholder="email" value="<%= users.email %>">
+    <br><br>
+    <input type="number" name="mobile" placeholder="mobile" value="<%= users.mobile %>">
+    <br><br>
+    <input type="submit">
+</form>
+
+
+
+<%- include('../layout/footer') %>

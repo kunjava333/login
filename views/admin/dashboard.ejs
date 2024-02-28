@@ -1,0 +1,39 @@
+ <% include('../layout/header') %>
+ <table>
+    <thead>
+        <tr>
+            <th>Nmae</th>
+            <th>Email</th>
+            <th>mobile Number</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <% for(i=0;i<users.length;i++){ %>
+      <tbody>
+        <tr>
+            <td><%= users[i].name %>
+            <td><%= users[i].email %></td>
+            <td><%= users[i].mobile %></td>
+            <td><%= users[i]._id  %></td>
+            <form action="/admin/edit?id=<%= users[i]._id  %>" method="post" >
+              <td><button>edit</button></td>  
+               
+            </form>
+        </tr>
+      </tbody>
+        <% } %> 
+        
+</table>
+<form action="/adminAdd" method="post"> 
+  <h3>Add user</h3>
+      <input type="text" name="name" placeholder="name" required>
+      <br><br>
+      <input type="email" name="email" placeholder="email" required>
+      <br><br>
+      <input type="number" name="mobile" placeholder="mobile.no" required>
+      <br><br>
+      <input type="password" name="password" placeholder="password" required>
+      <br><br>
+      <input type="submit">
+</form>
+<% include('../layout/footer') %>

@@ -1,0 +1,24 @@
+<% include('../layout/header.ejs') %>
+
+
+    <form action="/admin/adminlog" method="post">
+
+        <input type="email" name="adminEmail" placeholder="email" required>
+        <br>
+        <% if(typeof message !=='undefined' ){ %>
+            <p>
+                <%= message %>
+            </p>
+            <% } %>
+                <br>
+                <input type="password" name="adminPassword" placeholder="password" required>
+                <br><br>
+                <input type="submit">
+
+    </form>
+
+
+
+
+
+    <% include('../layout/footer.ejs') %>

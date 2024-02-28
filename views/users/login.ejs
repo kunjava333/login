@@ -1,0 +1,38 @@
+<% include('../layout/header.ejs') %>
+
+<h1>Login</h1>
+
+
+ <% if(typeof message !== 'undefined'){ %>
+    <h3> <%= message %> </h3>
+ <% } %>
+
+
+
+
+<form action="/login" method="post">
+
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <% if(typeof messageEmail !== 'undefined'){ %>
+
+        <p> <%= messageEmail  %>  </p>
+
+        <% } %>
+    <br><br>
+    <input type="password" name="password" placeholder="Enter your password" required>
+    <% if(typeof messagePass !== 'undefined'){ %>
+
+        <p> <%= messagePass  %>  </p>
+
+        <% } %>
+    <br><br>
+    <input type="submit" value="login">
+    <br>
+    <br>
+    <button><a href="/admin">Admin</a></button>
+</form>
+
+
+
+    
+<% include('../layout/footer.ejs') %>

@@ -1,0 +1,27 @@
+<% include("../layout/header.ejs") %>
+
+    <div class="container">
+
+        <h2>Login</h2>
+
+        <form action="" method="post">
+            
+            <input type="text" name="username" placeholder="Username" required>
+            <br><br><br>
+            <input type="email" name="email" placeholder="email" required>
+            <br><br><br>
+            <input type="text" name="mobile" placeholder="mobile" required>
+            <br><br><br>
+            <!-- <input type="file" name="image" required> -->
+            <br><br><br>
+            <input type="password" name="password" placeholder="Password" required>
+            <br><br>
+            <input type="submit" value="register ">
+
+        </form>
+    </div>
+    <% if (typeof message !== 'undefined') { %>
+        <p style="color: rgb(108, 32, 230);"><%= message %></p>
+    <% } %>
+    
+    <% include("../layout/footer.ejs") %>
